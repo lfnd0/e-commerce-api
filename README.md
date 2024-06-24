@@ -1,28 +1,28 @@
 # E-Commerce API
 
-### Techs
+### :hammer_and_wrench: Techs
 - [Poetry](https://python-poetry.org/docs/#installation)
 
 ### Bootstrap do projeto
 
-#### Instalação das dependências
+#### :arrow_down: Instalação das dependências
 ```sh
 poetry install
 ```
 
-#### Configuração do banco de dados
-##### Execuçao do *shell* no Flask
-```sh
-poetry run flask shell
-```
-##### Criação da base de dados
-```sh
-db.create_all()
-db.session.commit()
-exit()
-```
+#### :gear: Configuração do banco de dados
+1. Execução do *shell* no Flask
+   ```sh
+   poetry run flask shell
+   ```
+2. Criação da base de dados
+   ```sh
+   db.create_all()
+   db.session.commit()
+   exit()
+   ```
 
-#### Execução da API
+#### :fire: Execução da API
 ```sh
 poetry run dev
 ```
