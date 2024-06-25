@@ -1,0 +1,41 @@
+@baseURL = http://localhost:5000/api
+@contentType = application/json
+
+###
+GET {{baseURL}}
+
+###
+POST {{baseURL}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "nintendo switch",
+  "price": 1931.91,
+  "description": "portable console"
+}
+
+###
+POST {{baseURL}}/products
+Content-Type: {{contentType}}
+
+{
+  "name": "sandisk microsd 64gb",
+  "price": 43.44
+}
+
+###
+GET {{baseURL}}/products
+
+###
+GET {{baseURL}}/products/1/details
+
+###
+PATCH {{baseURL}}/products/1
+Content-Type: {{contentType}}
+
+{
+    "price": 2199
+}
+
+###
+DELETE {{baseURL}}/products/3
