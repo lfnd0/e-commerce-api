@@ -1,0 +1,5 @@
+from .make_create_product_use_case import make_create_product_use_case
+from .make_list_products_use_case import make_list_products_use_case
+from .make_fetch_product_by_id_use_case import make_fetch_product_by_id_use_case
+from .make_remove_product_by_id_use_case import make_remove_product_by_id_use_case
+from .make_update_product_by_id_use_case import make_update_product_by_id_use_case
