@@ -1,11 +1,15 @@
 # E-Commerce API
 
-### :hammer_and_wrench: Techs
+### Techs
 - [Poetry](https://python-poetry.org/docs/#installation)
+- [Flask](https://flask.palletsprojects.com/en/3.0.x/quickstart)
+- [Flask-SQLAlchemy](https://flask-sqlalchemy.palletsprojects.com/en/3.1.x/quickstart)
+- [Flask-Marshmallow](https://pypi.org/project/flask-marshmallow/#description)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ### Bootstrap do projeto
 
-#### :arrow_down: Instalação das dependências
+#### :construction: Instalação das dependências
 ```sh
 poetry install
 ```
@@ -26,3 +30,6 @@ poetry install
 ```sh
 poetry run dev
 ```
+
+### Autor
+[Luiz Fernando](https://github.com/lfnd0)
