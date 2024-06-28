@@ -1,4 +1,4 @@
-from ..repositories import ProductRepository
+from ...repositories import ProductRepository
 
 class UpdateProductByIdUseCase:
 
