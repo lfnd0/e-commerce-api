@@ -1,8 +1,8 @@
 from typing import List
 from datetime import datetime
 from . import ProductRepository
-from ..database import db
-from ..models import Product, products_schema, product_schema
+from ...models import Product, products_schema, product_schema
+from ...database import db
 
 class SQLiteProductRepository(ProductRepository):
 
