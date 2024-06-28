@@ -1,5 +1,5 @@
 from .. import RemoveProductByIdUseCase
-from ...repositories import SQLiteProductRepository
+from ....repositories import SQLiteProductRepository
 
 def make_remove_product_by_id_use_case():
     sqlite_product_repository = SQLiteProductRepository()

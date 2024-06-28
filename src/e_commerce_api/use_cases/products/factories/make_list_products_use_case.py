@@ -1,5 +1,5 @@
 from .. import ListProductsUseCase
-from ...repositories import SQLiteProductRepository
+from ....repositories import SQLiteProductRepository
 
 def make_list_products_use_case():
     sqlite_product_repository = SQLiteProductRepository()
