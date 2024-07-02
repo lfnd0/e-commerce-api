@@ -6,4 +6,5 @@ class RemoveProductByIdUseCase:
         self.products_repository = products_repository
 
     def execute(self, product_id: int):
-        return self.products_repository.remove_product_by_id(product_id)
+        product = self.products_repository.fetch_product_by_id_no_schema(product_id)
+        return self.products_repository.remove_product_by_id(product)

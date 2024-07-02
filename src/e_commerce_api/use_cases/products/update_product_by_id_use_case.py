@@ -1,9 +1,17 @@
+from datetime import datetime
 from ...repositories import ProductRepository
 
 class UpdateProductByIdUseCase:
 
-    def __init__(self, products_respository: ProductRepository):
-        self.products_respository = products_respository
+    def __init__(self, products_repository: ProductRepository):
+        self.products_repository = products_repository
 
     def execute(self, product_id: int, product_data: dict):
-        self.products_respository.update_product_by_id(product_id, product_data)
+        product = self.products_repository.fetch_product_by_id_no_schema(product_id)
+
+        product.name = product_data.get("name", product.name)
+        product.price = product_data.get("price", product.price)
+        product.description = product_data.get("description", product.description)
+        product.updated_at = datetime.now()
+
+        self.products_repository.update_product_by_id(product)
