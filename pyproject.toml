@@ -16,6 +16,7 @@ python-dotenv = "^1.0.1"
 flask-marshmallow = "^1.2.1"
 marshmallow-sqlalchemy = "^1.0.0"
 bcrypt = "^4.1.3"
+pylint = "^3.2.5"
 
 [tool.poetry.scripts]
 dev = "server:run"
