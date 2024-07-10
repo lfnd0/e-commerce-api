@@ -5,6 +5,27 @@
 GET {{baseURL}}
 
 ###
+POST {{baseURL}}/users
+Content-Type: {{contentType}}
+
+{
+    "username": "lfnd0",
+    "password": "pAWGIgl34wgnVSr"
+}
+
+###
+POST {{baseURL}}/users/login
+Content-Type: {{contentType}}
+
+{
+    "username": "lfnd0",
+    "password": "pAWGIgl34wgnVSr"
+}
+
+###
+POST {{baseURL}}/users/logout
+
+###
 POST {{baseURL}}/products
 Content-Type: {{contentType}}
 
@@ -38,4 +59,4 @@ Content-Type: {{contentType}}
 }
 
 ###
-DELETE {{baseURL}}/products/3
+DELETE {{baseURL}}/products/2
