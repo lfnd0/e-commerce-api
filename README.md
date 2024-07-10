@@ -25,11 +25,15 @@ poetry install
    db.session.commit()
    exit()
    ```
+3. Remoção da base de dados:
+   ```sh
+   db.drop_all()
+   ```
 
 #### :fire: Execução da API
 ```sh
 poetry run dev
 ```
 
-### Autor
+### DEV
 [Luiz Fernando](https://github.com/lfnd0)
