@@ -1,7 +1,8 @@
 from typing import List
-from . import ProductRepository
+from .product_repository import ProductRepository
 from ...models import Product, ProductSchema, products_schema, product_schema
 from ...database import db
+
 
 class SQLiteProductRepository(ProductRepository):
 
@@ -13,7 +14,7 @@ class SQLiteProductRepository(ProductRepository):
         products = Product.query.all()
         return products_schema.dump(products)
 
-    def fetch_product_by_id(self, product_id: int) -> ProductSchema:
+    def fetch_product_by_id_with_schema(self, product_id: int) -> ProductSchema:
         product = Product.query.get_or_404(product_id)
         return product_schema.dump(product)
 

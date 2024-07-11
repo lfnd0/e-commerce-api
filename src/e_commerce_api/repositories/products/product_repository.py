@@ -13,7 +13,7 @@ class ProductRepository(ABC):
         pass
 
     @abstractmethod
-    def fetch_product_by_id(self, product_id: int) -> ProductSchema:
+    def fetch_product_by_id_with_schema(self, product_id: int) -> ProductSchema:
         pass
 
     @abstractmethod
