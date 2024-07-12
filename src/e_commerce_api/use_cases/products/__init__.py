@@ -1,5 +1,5 @@
 from .create_product_use_case import CreateProductUseCase
 from .list_products_use_case import ListProductsUseCase
-from .fetch_product_by_id_use_case import FetchProductByIdUseCase
+from .fetch_product_by_id_with_schema_use_case import FetchProductByIdWithSchemaUseCase
 from .remove_product_by_id_use_case import RemoveProductByIdUseCase
 from .update_product_by_id_use_case import UpdateProductByIdUseCase
