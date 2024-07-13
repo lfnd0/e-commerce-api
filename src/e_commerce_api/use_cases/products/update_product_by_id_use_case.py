@@ -1,12 +1,14 @@
+from typing import Dict
 from datetime import datetime
 from ...repositories import ProductRepository
+
 
 class UpdateProductByIdUseCase:
 
     def __init__(self, products_repository: ProductRepository):
         self.products_repository = products_repository
 
-    def execute(self, product_id: int, product_data: dict):
+    def execute(self, product_id: int, product_data: Dict):
         product = self.products_repository.fetch_product_by_id_no_schema(product_id)
 
         product.name = product_data.get("name", product.name)
