@@ -1,10 +1,13 @@
 from dotenv import load_dotenv
-from e_commerce_api import main, app
 
 load_dotenv()
 
-def run():
-    main()
+from e_commerce_api import app_module, app
 
-if __name__ == '__main__':
-    main()
+
+def run():
+    app_module.run()
+
+
+if __name__ == "__main__":
+    app_module.run()
