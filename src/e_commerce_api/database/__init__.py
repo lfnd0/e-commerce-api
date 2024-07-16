@@ -1,1 +1,1 @@
-from .database_config import db, ma
+from .database_config import DatabaseConfig
