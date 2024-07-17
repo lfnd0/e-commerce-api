@@ -1,5 +1,5 @@
 from datetime import datetime
-from ..database import db, ma
+from e_commerce_api import db, ma
 from .user import UserSchema
 
 

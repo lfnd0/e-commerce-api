@@ -1,6 +1,6 @@
 from datetime import datetime
 from flask_login import UserMixin
-from ..database import db, ma
+from e_commerce_api import db, ma
 
 
 class User(db.Model, UserMixin):
