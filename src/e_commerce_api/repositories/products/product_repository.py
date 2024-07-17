@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
-from typing import List
+from typing import List, Dict
 from ...models import Product, ProductSchema
+
 
 class ProductRepository(ABC):
 
@@ -17,11 +18,11 @@ class ProductRepository(ABC):
         pass
 
     @abstractmethod
-    def remove_product_by_id(self, product: Product) -> None:
+    def remove_product_by_id(self, product_id: int) -> None:
         pass
 
     @abstractmethod
-    def update_product_by_id(self, product: Product) -> None:
+    def update_product_by_id(self, product_id: int, product: Dict) -> None:
         pass
 
     @abstractmethod

@@ -1,7 +1,7 @@
-from typing import List
+from typing import List, Dict
+from e_commerce_api import db
 from .product_repository import ProductRepository
 from ...models import Product, ProductSchema, products_schema, product_schema
-from ...database import db
 
 
 class SQLiteProductRepository(ProductRepository):
@@ -18,11 +18,12 @@ class SQLiteProductRepository(ProductRepository):
         product = Product.query.get_or_404(product_id)
         return product_schema.dump(product)
 
-    def remove_product_by_id(self, product: Product) -> None:
-        db.session.delete(product)
+    def remove_product_by_id(self, product_id: int) -> None:
+        Product.query.filter(Product.id == product_id).delete()
         db.session.commit()
 
-    def update_product_by_id(self, product: Product) -> None:
+    def update_product_by_id(self, product_id: int, product: Dict) -> None:
+        Product.query.filter(Product.id == product_id).update(product)
         db.session.commit()
 
     def fetch_product_by_id_no_schema(self, product_id: int) -> Product:
