@@ -1,5 +1,6 @@
 from ...repositories import ProductRepository
 
+
 class ListProductsUseCase:
 
     def __init__(self, products_repository: ProductRepository):
