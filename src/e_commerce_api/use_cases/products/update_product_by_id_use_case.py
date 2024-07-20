@@ -9,11 +9,13 @@ class UpdateProductByIdUseCase:
         self.products_repository = products_repository
 
     def execute(self, product_id: int, product_data: Dict):
-        product = self.products_repository.fetch_product_by_id_no_schema(product_id)
+        allowed_fields = ["name", "price", "description"]
 
-        product.name = product_data.get("name", product.name)
-        product.price = product_data.get("price", product.price)
-        product.description = product_data.get("description", product.description)
-        product.updated_at = datetime.now()
+        update_product = {
+            field: value
+            for field, value in product_data.items()
+            if field in allowed_fields
+        }
+        update_product["updated_at"] = datetime.now()
 
-        self.products_repository.update_product_by_id(product)
+        self.products_repository.update_product_by_id(product_id, update_product)
