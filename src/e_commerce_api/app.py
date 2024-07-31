@@ -1,5 +1,6 @@
 import os
 from flask import Flask
+from flask_talisman import Talisman
 from flask_cors import CORS
 from .database import DatabaseConfig
 
@@ -19,6 +20,7 @@ class _App:
         self._ma = self._database_config.get_ma()
 
         CORS(self._app)
+        Talisman(self._app)
 
     def get_app(self):
         return self._app
