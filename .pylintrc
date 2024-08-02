@@ -5,7 +5,9 @@ disable=
     C0115, # missing-class-docstring
     C0116, # missing-function-docstring
     C0209, # consider-using-f-string
+    C0413, # wrong-import-position
     E0015, # unrecognized-option
+    E1101, # no-member
     R0903, # too-few-public-methods
     W0611, # unused-import
     W0718, # broad-exception-caught
