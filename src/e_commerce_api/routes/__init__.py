@@ -8,3 +8,4 @@ from .product_route import (
     patch_product_by_id,
 )
 from .user_route import user_blueprint, post_user, login, logout
+from .cart_route import cart_blueprint, post_cart
