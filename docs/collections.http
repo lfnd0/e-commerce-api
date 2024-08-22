@@ -60,3 +60,23 @@ Content-Type: {{contentType}}
 
 ###
 DELETE {{baseURL}}/products/2
+
+###
+POST {{baseURL}}/carts
+Content-Type: {{contentType}}
+
+{
+    "products": [
+        {
+            "product_id": 1,
+            "product_quantity": 1
+        },
+        {
+            "product_id": 2,
+            "product_quantity": 2
+        }
+    ]
+}
+
+###
+GET {{baseURL}}/carts/1/details
