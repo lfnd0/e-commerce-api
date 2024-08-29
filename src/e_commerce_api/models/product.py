@@ -8,11 +8,11 @@ class Product(db.Model):
     name = db.Column(db.String(100), nullable=False)
     price = db.Column(db.Float, nullable=False)
     description = db.Column(db.Text, nullable=True)
-    owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     created_at = db.Column(db.DateTime, default=datetime.now())
     updated_at = db.Column(db.DateTime, nullable=True)
+    owner_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
 
-    owner = db.relationship("User", backref=db.backref("products", lazy=True))
+    owner = db.relationship("User", backref=db.backref("products", lazy="select"))
 
 
 class ProductSchema(ma.Schema):
@@ -24,7 +24,6 @@ class ProductSchema(ma.Schema):
             "name",
             "price",
             "description",
-            "owner_id",
             "created_at",
             "updated_at",
             "owner",
