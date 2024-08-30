@@ -28,3 +28,7 @@ class ProductRepository(ABC):
     @abstractmethod
     def fetch_product_by_id_no_schema(self, product_id: int) -> Product:
         pass
+
+    @abstractmethod
+    def list_products_by_owner_id(self, owner_id: int) -> List[ProductSchema]:
+        pass

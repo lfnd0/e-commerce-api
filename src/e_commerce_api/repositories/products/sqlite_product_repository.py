@@ -29,3 +29,7 @@ class SQLiteProductRepository(ProductRepository):
     def fetch_product_by_id_no_schema(self, product_id: int) -> Product:
         product = Product.query.get_or_404(product_id)
         return product
+
+    def list_products_by_owner_id(self, owner_id: int) -> List[ProductSchema]:
+        products = Product.query.filter(Product.owner_id == owner_id)
+        return products
