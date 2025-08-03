@@ -1,2 +1,0 @@
-from .product_repository import ProductRepository
-from .sqlite_product_repository import SQLiteProductRepository
